@@ -1,0 +1,58 @@
+.img_mid_profile {
+    @include imgProfile;
+}
+
+.container_mid_profile {
+    @include containerProfile();
+    position: relative;
+    top: -20%;
+    left: 50%;
+}
+
+.text_mid_profile {
+    @include textProfile();
+}
+.text_mid_profile h2{
+    @include h2Profile();
+    }
+        .text_mid_profile p{
+            @include h2Profile-P();
+    }
+.text_mid_profile:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width:1800px) {
+    .container_mid_profile {
+        @include screenContainerProfile();
+    }
+
+    .img_low_profile {
+        height: max-content;
+    }
+}
+
+// Mid profile content
+.mid_profile_background{
+    @include profileBackground();
+}
+
+.mid_content{
+    @include profileContent();
+}
+
+.content__text p{
+    @include contentTextP();
+
+}
+
+
+@media screen and (max-width:1800px) {
+    .mid_content {
+        @include lowContentScreen(); 
+    }
+
+    .mid_profile_background {
+        height: max-content;
+    }
+}

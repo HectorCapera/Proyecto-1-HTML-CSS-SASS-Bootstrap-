@@ -1,0 +1,286 @@
+.container__background-triangle {
+    display: flex;
+    min-width: 100%;
+    height: 600px;
+    margin: auto;
+    background-color: rgb(37, 37, 37);
+    position: relative;
+    top: 50vh;
+    left: 50vh;
+
+    gap: 3.5em;
+    flex-wrap: wrap;
+
+    transform: translate(-50vh, -50vh);
+
+}
+
+.triangle {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    background: red;
+    position: absolute;
+
+}
+
+.triangle1 {
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(to left, #0ea1e6, #072f63);
+    right: 100px;
+    top: 100px;
+    animation: t1 8s ease infinite;
+
+}
+
+.triangle2 {
+    width: 240px;
+    height: 200px;
+    background: linear-gradient(to left, #fa7c14, #dd7ccd);
+    right: 500px;
+    top: 70px;
+    animation: t2 8s ease infinite;
+
+}
+
+.triangle3 {
+    width: 200px;
+    height: 170px;
+    background: linear-gradient(to left, #8fbed4, #1e67c7);
+    right: 800px;
+    top: 260px;
+    animation: t3 8s ease infinite;
+
+}
+
+.triangle4 {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(to left, #dd36c7, #ece7a2);
+    right: 1100px;
+    top: 80px;
+    animation: t4 8s ease infinite;
+
+}
+
+.triangle5 {
+    width: 170px;
+    height: 200px;
+    background: linear-gradient(to left, #35d5eb, #161b5e);
+    right: 1320px;
+    top: 160px;
+    animation: t5 8s ease infinite;
+
+}
+
+
+@keyframes t1 {
+    0% {
+        transform: rotate(45deg) translateY(0px);
+    }
+
+    50% {
+        transform: rotate(45deg) translateY(20px);
+    }
+
+    100% {
+        transform: rotate(45deg) translateY(0px);
+    }
+}
+
+@keyframes t2 {
+    0% {
+        transform: rotate(35deg) translateY(0px);
+    }
+
+    50% {
+        transform: rotate(35deg) translateY(20px);
+    }
+
+    100% {
+        transform: rotate(35deg) translateY(0px);
+    }
+}
+
+@keyframes t3 {
+    0% {
+        transform: rotate(65deg) translateY(0px);
+    }
+
+    50% {
+        transform: rotate(65deg) translateY(20px);
+    }
+
+    100% {
+        transform: rotate(65deg) translateY(0px);
+    }
+}
+
+@keyframes t4 {
+    0% {
+        transform: rotate(35deg) translateY(0px);
+    }
+
+    50% {
+        transform: rotate(35deg) translateY(20px);
+    }
+
+    100% {
+        transform: rotate(35deg) translateY(0px);
+    }
+}
+
+@keyframes t5 {
+    0% {
+        transform: rotate(95deg) translateY(0px);
+    }
+
+    50% {
+        transform: rotate(95deg) translateY(20px);
+    }
+
+    100% {
+        transform: rotate(95deg) translateY(0px);
+    }
+}
+
+.container__cards {
+    width: 100%;
+    gap: 1.5em;
+    margin: 0;
+
+    padding-bottom: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    // gap: 1.5em;
+
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+//Tarjetas 
+
+.first_card {
+
+    position: relative;
+    // right: 15%;
+    flex-basis: auto;
+    max-width: 470px;
+    flex-grow: 1;
+    flex-basis: 100%;
+    gap: 1em;
+}
+
+
+.card {
+    width: 350px;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+
+    /* efecto blur - vidrio */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    /*transition screen */
+    transition: all 500ms;
+}
+
+.card:hover { 
+    transform: translateY(-10px);
+}
+
+.card:hover .cover__card img {
+    transform: scale(1.1);
+}
+
+.cover__card {
+    width: 100%;
+    height: 180px;
+    border-radius: 14px;
+    overflow: hidden;
+
+}
+
+.cover__card img {
+    width: 110%;
+    transition: all 300ms;
+
+}
+
+// Imagen introducción 
+.introduction_image img {
+    width: 390px;
+    padding-left: 100px;
+}
+
+.card h2 {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    margin: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.card p {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(240, 240, 240);
+    letter-spacing: 0.5px;
+}
+
+.card hr {
+    margin-top: 30px;
+    border: none;
+    height: 0.2px;
+    background: rgba(138, 138, 138, 0.938);
+}
+
+.footer__card {
+    margin-top: 10px;
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+}
+
+.footer__card h3 {
+    font-size: 15px;
+    font: 300;
+}
+
+/* Responsive cards */
+@media screen and (max-width:1800px) {
+    .container__cards {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        margin-top: 0px;
+        padding-bottom: 100px;
+
+    }
+
+    .container__background-triangle {
+        height: max-content;
+    }
+
+    .triangle4 {
+        right: 10vh;
+        top: 115vh;
+    }
+
+    .triangle5 {
+        right: 15vh;
+        top: 75vh;
+    }
+}

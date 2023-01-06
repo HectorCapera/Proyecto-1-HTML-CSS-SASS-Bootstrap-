@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 1</title>
+  <link rel="stylesheet" href="styles.css">
+  <!--Script de libreria js de bootstrap-->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <!--Script de fonts google-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,100&family=Roboto:ital,wght@0,300;0,500;1,100&display=swap"
+    rel="stylesheet">
+  <!--Script de icónos de bootstrap-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
+</head>
+<div class="head">
+  <p>¡Aprende sobre tu PC ideal!
+    <i class="bi bi-amd"></i>
+    <i class="bi bi-nvidia "></i>
+  </p>
+</div>
+<!-- Barra de navegación -->
+<nav class="navbar-expand-lg navbar-dark ">
+  <ul class="nav nav-tabs bg-black  " id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button"
+        role="tab" aria-controls="home-tab-pane" aria-selected="false">Introducción
+      </button>
+      <!-- inicialmente aria-selected era true -->
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button"
+        role="tab" aria-controls="profile-tab-pane" aria-selected="false">Gama de entrada </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button"
+        role="tab" aria-controls="contact-tab-pane" aria-selected="false">Gama intermedia</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="entrada-tab" data-bs-toggle="tab" data-bs-target="#entrada-tab-pane" type="button"
+        role="tab" aria-controls="entrada-tab-pane" aria-selected="false">Gama alta </button>
+    </li>
+
+    <!-- Botón superior log in - región -->
+    <button type="button" class="btn btn-dark m-lg-auto"><i class="bi bi-globe2"></i></button>
+
+
+  </ul>
+
+
+  <div class="tab-content" id="myTabContent" style="background-color:black; color: #e3f2fd">
+    <div class="tab-pane fade" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">Te
+      asesoraremos frente a las diferentes gamas que ofrece el mercado para tu computador ideal</div>
+    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">Gama de
+      entrada destinada para conocer los beneficios de una computadora con excelentes productos con una calidad y precio
+      equilibrada para las necesidades cotidianas y requerimientos básicos de gaming y diseño.
+    </div>
+    <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">Gama
+      intermedia pensada para jugadores frecuentes, trabajos con una exigencia intermedia entre procesador y chip
+      gráfico.</div>
+    <div class="tab-pane fade" id="entrada-tab-pane" role="tabpanel" aria-labelledby="entrada-tab" tabindex="0">Gama
+      alta enfocada para el diseño, desarrollo y videojuegos de última generación con las últimas especificaciones del
+      mercado.</div>
+  </div>
+
+</nav>
+
+
+<!-- Carousel bootstrap-->
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+      aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="3000">
+      <img src="/Multimedia/Imagenes/71-715776_amd-ryzen-radeon.jpg" class="d-block w-100" alt="AMD">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>AMD</h5>
+        <p>Tecnologia gráfica basada en Radeon y Procesadores basados en tecnologia Ryzen</p>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="3000">
+      <img src="/Multimedia/Imagenes/102004-Nvidia.jpg" class="d-block w-100" alt="Nvidia">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Nvidia</h5>
+        <p>Tecnologia avanzada de GPU, Streaming y Diseño</p>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="3000">
+      <img src="/Multimedia/Imagenes/Intel.png" class="d-block w-100" alt="">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Intel</h5>
+        <p>Tecnologia basada en Procesadores (CPU)</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!--introducción-->
+<!-- Triangulos de fondo-->
+
+<div class="container__background-triangle">
+  <div class="triangle triangle1"></div>
+  <div class="triangle triangle2"></div>
+  <div class="triangle triangle3"></div>
+  <div class="triangle triangle4"></div>
+  <div class="triangle triangle5"></div>
+
+  <!--Bocadillo introducción-->
+  <!--Tarjetas blur-->
+  <div class="container__cards">
+
+    <div class="card first_card">
+
+      <h2>Conoce más sobre el mundo computacional</h2>
+      <div class="cover__card introduction_image">
+        <img
+          src="../Multimedia/Imagenes/kisspng-pc-master-race-personal-computer-pc-game-video-gam-5af7d20e0ba3e4.8415404715261906060477.png"
+          alt="Pc Master race">
+      </div>
+      <p>En el ecosistema computacional es posible construir un computador a tu medida y exigencia,
+        comenzando desde la gama de entrada, la gama media y la gama alta,
+        todas destinadas a un público amplio y variado según sus necesidades,
+        de momento, centremos la atención en los principales componentes que pueden
+        definir cada una de las gamas y sus funciones.</p>
+    </div>
+
+    <div class="card">
+      <h2>Board</h2>
+      <div class="cover__card">
+        <img src="../Multimedia/Imagenes/BoardAsus.jpg" alt="Board">
+      </div>
+
+      <p>Es el dispositivo que funciona como la plataforma o circuito principal de una computadora, integra y coordina
+        todos los demás elementos, es clave elegir una buena placa base atendiendo al socket, chipset, tecnologías,
+        velocidades RAM, PCI-Express y conectores o puertos de salida.</p>
+      <hr>
+
+    </div>
+    <div class="card">
+      <h2>CPU (Central Processing Unit)</h2>
+      <div class="cover__card">
+        <img src="../Multimedia/Imagenes/Ryzen.jpg" alt="CPU">
+      </div>
+
+      <p>Se encarga de procesar todas las instrucciones del dispositivo, leyendo las órdenes y requisitos del sistema
+        operativo, así como las instrucciones de cada uno de los componentes y las aplicaciones, Cuanto más potente sea
+        el procesador,
+        más rápido podrá hacer las operaciones y más rápido funcionará tu dispositivo en general.</p>
+      <hr>
+
+    </div>
+    <div class="card">
+      <h2>GPU (Graphics Processing Unit)</h2>
+      <div class="cover__card">
+        <img src="../Multimedia/Imagenes/GPU 1.jpg" alt="">
+      </div>
+
+      <p>Se ocupa de sacar adelante todo lo relacionado con la carga de
+        trabajo gráfico que debe procesador un sistema. A diferencia del procesador, que realiza tareas de propósito
+        general, la GPU se especializa en tareas que son necesarias para crear elementos gráficos, tanto en 2D como en
+        3D.</p>
+      <hr>
+
+    </div>
+  </div>
+</div>
+
+<!--Low profile description-->
+<div class="img_low_profile" style="background-image: url('/Multimedia/Imagenes/Espacio5.jpg')">
+
+  <div class="container_low_profile">
+    <div class="text_low_profile">
+      <h2>Gama De Entrada</h2>
+      <p>La gama baja o de entrada, como se suele nombrar, es donde se encuentran las computadoras con los requisitos
+        mínimos modernos para ejecutar programas de edición, renderizado y videojuegos; esta gama se caracteriza por no
+        poseer una GPU dedicada, puesto que, traen consigo en su CPU integrada capaz de cubrir esas funciones mientras
+        mantiene un rendimiento sostenible, además de traer consigo una capacidad de memoria RAM suficiente para
+        mantener una experiencia fluida. </p>
+    </div>
+  </div>
+</div>
+<!--Low profile content-->
+
+<div class="low_profile_background">
+  <div class="low_content">
+
+    <div class="img__profile">
+      <img src="Multimedia/Imagenes/Ryzen integrado.jpg" alt="Ryzen integrado">
+      <div class="content__text">
+        <h2>CPU con gráficos integrados</h2>
+        <p>En los gráficos integrados, la GPU comparte absolutamente todo con la CPU, de este modo si sabes que no
+          tendrás qeu recurrir a tanta potencia gráfica para juegos y de renderizado para edición y otros programas, la
+          competencia más fuerte la desarrolla AMD/Ryzen con su tecnologia APU(Accelerated Processing Unit). </p>
+        <button type="button" class="btn__profile"> <a
+            href="https://www.youtube.com/watch?v=HafleIF-7_8&ab_channel=BENCHMARKSFORGAMERS" target="_blank">Ver
+            pruebas</a> </button>
+      </div>
+    </div>
+
+    <div class="img__profile">
+      <img src="Multimedia/Imagenes/ram low profile.jpg" alt="ram low profile">
+      <div class="content__text">
+        <h2>Memoria RAM</h2>
+        <p>la RAM sirve para que el ordenador o dispositivo móvil gestione los datos de las aplicaciones en
+          funcionamiento, la cantidad que tengas afecta directamente al rendimiento de tu dispositivo. Cuanta más RAM
+          tengas más aplicaciones podrás gestionar a la vez, en este caso de gama de entrada es muy recomendable
+          utilizar 16gb seccionadas en 1 par de 8gb para aprovechar el doble canal de la placa base.</p>
+        <button type="button" class="btn__profile"> <a href="https://www.youtube.com/watch?v=gu31mUXG2BM"
+            target="_blank">Ver más</a>
+        </button>
+      </div>
+    </div>
+
+    <div class="img__profile">
+      <img src="Multimedia/Imagenes/board low profile.jpg" alt="#">
+      <div class="content__text">
+        <h2>Placa base</h2>
+        <p>Una placa base es un circuito impreso al que se conectan el resto de los componentes de un ordenador para que
+          estos funcionen de manera óptima, su función es que todos los elementos esenciales de un PC cuenten con
+          energía eléctrica para responder en todo momento de manera adecuada y coordinar los flujos de datos.</p>
+        <button type="button" class="btn__profile"> <a href="https://www.youtube.com/watch?v=47m6_PZbGLk"
+            target="_blank">Ver más</a>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--Mid profile description-->
+
+<div class="img_mid_profile" style="background-image: url('/Multimedia/Imagenes/Play\ mid\ profile.jpg')">
+
+  <div class="container_mid_profile">
+    <div class="text_mid_profile">
+      <h2>Gama Media</h2>
+      <p>La gama media se caracteriza por poseer especicifaciones enfocadas a disfrutar títulos AAA de videojuegos en
+        calidad 1080p, alcanzando un ratio mínimo de 60 FPS (imagenes por segundo), además, en esta gama se encuentra
+        los setups para realizar Streaming sin sacrificar excesivamente recursos del sistema, además, del uso
+        considerado de varios programas de edición y renderizado. Aunado a ello, tiende a ser la gama más buscada y
+        equilibrada para cualquier tipo de trabajo básico/interemdio. </p>
+    </div>
+  </div>
+</div>
+<!-- Mid profile content -->
+<div class="mid_profile_background">
+  <div class="mid_content">
+
+    <div class="img__profile">
+      <img src="Multimedia/Imagenes/Ryzen mid profile2.jpg" alt="CPU mid profile">
+      <div class="content__text">
+        <h2>CPU Ryzen/Intel</h2>
+        <p>Dentro de la gama media se comienza a orientar al usuario frente a las necesidades que posea y el motivo por
+          el cual adquiere un computador de esta gama, puesto que, dentro de la categoria, Ryzen está enfocada en fuerza
+          bruta de procesador y accesibilidad de precio, mientras Intel posee un equilibrio más armonioso en los
+          diferentes campos que se le exija.</p>
+        <button type="button" class="btn__profile"> <a href="https://www.youtube.com/watch?v=tdDAOZ6hkjY"
+            target="_blank">Ver pruebas</a>
+        </button>
+      </div>
+    </div>
+
+    <div class="img__profile">
+      <img src="Multimedia/Imagenes/gpu mid profile.jpg" alt="GPU mid profile">
+      <div class="content__text">
+        <h2>GPU AMD/Nvidia</h2>
+        <p>Dentro de esta gama encontramos las GPU dedicadas, la cual provee un mejor desempeño en las tareas visuales
+          del sistema, Si eres cineasta, arquitecto, diseñador, fotógrafo o artista digital, algunos de los softwares
+          que usarás para tus proyectos requieren de muchos recursos. Teniendo opciones variadas según la gama y la
+          marca que escojas AMD/Nivida, la cuales deben estar acompañadas de una CPU adecuada para evitar los cuellos de
+          botella y aprovechar el rendimiento al máximo</p>
+        <button type="button" class="btn__profile"> <a href="https://www.youtube.com/watch?v=kbc1s3r53HA"
+            target="_blank">Ver pruebas</a>
+        </button>
+      </div>
+    </div>
+
+    <div class="img__profile">
+      <img src="Multimedia/Imagenes/board mid profile.jpg" alt="Board mid profile">
+      <div class="content__text">
+        <h2>Placa base AM4/Z790</h2>
+        <p>En todas las gamas se encuentran dos diferencias marcadas por el Chipset, el cual determina que tecnologia y
+          marca puede usarse, si AMD o Intel, puesto que, no son compatibles entre sí, de este modo, se categorizan las
+          placas base, dentro de sus funciones en la gama media comienzan a aparecer más protecciones para componentes,
+          disipadores y ARM; para mayor complejidad y velocidad de transición de datos.</p>
+        <button type="button" class="btn__profile"> <a href="https://www.youtube.com/watch?v=A2mwE_bEE7I"
+            target="_blank">Ver pruebas</a>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Top profile description-->
+
+<div class="img_top_profile" style="background-image: url('/Multimedia/Imagenes/lowprofile1.jpeg')">
+
+  <div class="container_top_profile">
+    <div class="text_top_profile">
+      <h2>Gama Alta</h2>
+      <p>La gama alta se caracteriza por tener las especificaciones más competitivas del mercado, referente al enfoque /
+        uso que
+        se le asigne cada usuario, puesto que, una computadora enfocada al diseño, a la edición de video, streaming o
+        videojuegos poseen diferentes componentes, aun así, contemplan una armonia completa entre cada uno de ellos,
+        aprovechando el 100% de sus capacidades en conjunto, llevando la experiencia de usuario a otro nivel</p>
+    </div>
+  </div>
+</div>
+
+<!-- Top profile content-->
+
+<div class="top_profile_background">
+  <div class="top_content">
+
+    <div class="img__profile">
+      <img src="Multimedia/Imagenes/Cpu top profile.jpg" alt="CPU top profile">
+      <div class="content__text">
+        <h2>CPU Threadripper/Core i9</h2>
+        <p>Dentro del tope de gama de CPU se encuentra el Treahdripper de AMD, el cual cuenta hasta con 64 núcleos, e
+          Intel con su Core i9-13900k con 24 núcleos y 32 hilos, ambos con frecuencias por encima de los 5,0 GHZ,
+          alcanzando una fuerza imparable para cualquier proceso a ejecutar.</p>
+        <button type="button" class="btn__profile"> <a href="https://www.youtube.com/watch?v=2Y_MXbAhH8k"
+            target="_blank">Ver pruebas</a>
+        </button>
+      </div>
+    </div>
+
+    <div class="img__profile">
+      <img src="Multimedia/Imagenes/GPU Top 2.jpg" alt="GPU top profile">
+      <div class="content__text">
+        <h2>RTX 4090/RX 7900 XTX</h2>
+        <p>El tope de gama actualmente lo disputan Nivida con su RTX 4090 y AMD con la RX 7900 XTX, las cuales cuentan
+          con específicaciones muy por encima en del promedio, utilizadas en su mayoría por profesionales e industrias
+          especializadas en áreas específicas que requieran potencia gráfica y de calculo</p>
+        <button type="button" class="btn__profile"> <a
+            href="https://www.youtube.com/watch?v=BB7UWAFI77I&ab_channel=RoloTEC" target="_blank">Ver pruebas</a>
+        </button>
+      </div>
+    </div>
+
+    <div class="img__profile">
+      <img src="Multimedia/Imagenes/board top profile 2.jpg" alt="Board top profile">
+      <div class="content__text">
+        <h2>Placa base TRX40</h2>
+        <p>Dentro de la gama alta existen placas base que cumplen con chipsets específicos, tal es el caso de la TRX40,
+          la cual es exclusiva del procesador Threadripper, los cuales cuentan multifuncionalmente con caracteristicas
+          de enfriamiento, lectura, procesamiento de información y funcionamiento a otro nivel. </p>
+        <button type="button" class="btn__profile"> <a
+            href="https://www.youtube.com/watch?v=BB7UWAFI77I&ab_channel=RoloTEC" target="_blank">Ver pruebas</a>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Footer con bootstrap-->
+
+<div class="container-fluid text-white p-3" style="font-family:Arial, Helvetica, sans-serif; background: #0f0c29;
+background: linear-gradient(to right, #290c29, #262470, #290c0c);">
+
+  <div class="mt-3 ">
+    <h3 class="text-center fw-bold">
+      Gracias por visitar la página
+    </h3>
+    <p class="text-center">A continuación podrá dirigirse al repositorio GitHub para ver más detalladamente el proceso
+      de creación de la página.</p>
+    <center>
+      <button class="btn btn-block btn-outline-light">
+        <a href="https://github.com/HectorCapera?tab=repositories" target="_blank"
+          style="outline: none; text-decoration: none;">
+          <i class="bi bi-github "></i>
+        </a>
+      </button>
+    </center>
+    <hr>
+  </div>
+  <div class="row justify-content-around text-center text-md-start">
+    <div class="col-md-2 text-center">
+
+      <h4 class="fw-bold mt-3">Tecnologías utilizadas</h4>
+
+    </div>
+    <div class="col-md-2">
+      <ul class="list-unstyled">
+        <li class="fw-bold my-2"> HyperText Markup Language</li>
+        <li><a href="#" class="text-decoration-none text-white"><i class="bi bi-filetype-html"></i> HTML</a></li>
+      </ul>
+    </div>
+
+    <div class="col-md-2">
+      <ul class="list-unstyled">
+        <li class="fw-bold my-2">Cascading Style Sheets</li>
+        <li><a href="#" class="text-decoration-none text-white"><i class="bi bi-filetype-css"></i> CSS</a></li>
+      </ul>
+    </div>
+
+    <div class="col-md-2">
+      <ul class="list-unstyled">
+        <li class="fw-bold my-2">Framework</li>
+        <li><a href="#" class="text-decoration-none text-white"><i class="bi bi-bootstrap-fill"></i> Bootstrap</a></li>
+
+      </ul>
+
+    </div>
+
+    <div class="col-md-2">
+      <li class="fw-bold my-2 list-unstyled">Preprocesador</li>
+      <ul class="list-unstyled d-flex justify-content-center justify-content-md-start">
+        <li><a href="#" class="text-white"><i class="bi bi-filetype-sass"></i></a> Sass</li>
+      </ul>
+    </div>
+
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-12 text-center pt-2">
+      <p>Contacto: <a href="mailto: hectorcapera415@gmail.com;"
+          style="outline: none; text-decoration: none; color: white;">hectorcapera415@gmail.com</a> <i
+          class="bi bi-envelope-at-fill"></i>
+      <p>&copy; 2023 Copyright <a href="#" class="text-white"> Hector Capera </a></p>
+
+    </div>
+
+  </div>
+</div>
+</body>
+
+
+<!--Script que inserta los módulos y codigos js-->
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<!--Script que inserta una libreria de terceros Popper-->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+  integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+
+</html>
+
+<!-- style="background-image: url('Multimedia/Imagenes/195-1958630_tron-hd-wallpaper-tron-legacy-concept-art-hd.png'); background-position: center; background-repeat: no-repeat; background-size: cover;" -->

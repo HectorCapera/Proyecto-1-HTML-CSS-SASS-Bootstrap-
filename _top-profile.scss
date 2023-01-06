@@ -1,0 +1,59 @@
+.img_top_profile {
+    @include imgProfile;
+
+}
+
+.container_top_profile {
+    @include containerProfile();
+    position: relative;
+    top: -20%;
+    left: 73%;
+}
+
+.text_top_profile {
+    @include textProfile();
+}
+.text_top_profile h2{
+    @include h2Profile();
+    }
+        .text_top_profile p{
+            @include h2Profile-P();
+    }
+.text_top_profile:hover {
+    transform: translateX(-30px);
+}
+
+@media screen and (max-width:1800px) {
+    .container_top_profile {
+        @include screenContainerProfile();
+    }
+
+    .img_top_profile {
+        height: max-content;
+    }
+}
+
+//Top profile content
+.top_profile_background{
+    @include profileBackground();
+}
+
+.top_content{
+    @include profileContent();
+}
+
+.content__text p{
+    @include contentTextP();
+
+}
+
+
+@media screen and (max-width:1800px) {
+    .top_content {
+        @include lowContentScreen(); 
+    }
+
+    .top_profile_background {
+        height: max-content;
+    }
+}
